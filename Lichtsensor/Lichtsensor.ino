@@ -1,5 +1,5 @@
 int eingang= A7; 
-int LED = 12; 
+int LED = 5; 
 int sensorWert = 0; 
 
 void setup()//Hier beginnt das Setup.
@@ -14,7 +14,7 @@ void loop()
 sensorWert=analogRead(eingang); 
 Serial.print("Sensorwert = " ); Serial.println(sensorWert); 
 
-if (sensorWert > 105 ) //Wenn der Sensorwert über 512 beträgt….
+if (sensorWert > 650) //Wenn der Sensorwert über 512 beträgt….
 {
 digitalWrite(LED, HIGH); //…soll die LED leuchten…
 }
